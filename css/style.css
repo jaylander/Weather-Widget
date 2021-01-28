@@ -1,0 +1,64 @@
+body {
+	background: rgb(54,53,72);
+	background: linear-gradient(90deg, rgba(54,53,72,1) 0%, rgba(3,3,3,1) 33%);
+	font-family: 'Roboto', sans-serif;
+}
+
+.weather-widget {
+	background: rgb(3,3,3);
+	background: linear-gradient(90deg, rgba(3,3,3,1) 0%, rgba(54,53,72,1) 72%);
+	color: #fff;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 1fr 1fr;
+	grid-template-areas: 
+		"location time"
+		"weather-icon weather-icon"
+		"other-data temp";
+	width: 360px;
+	margin: 0 auto;
+	border: 1px solid #595A60;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+.location {
+	padding-left: 20px;
+}
+
+.weather-icon {
+	grid-area: weather-icon;
+	text-align: center;
+	height: 200px;
+	padding-top: 30px;
+}
+
+.weather-icon i {
+	font-size: 5rem;
+}
+
+.other-data {
+	grid-area: other-data;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 10px;
+}
+
+.other-data i {
+	text-align: center;
+	font-size: 1.75rem;
+}
+.other-data h2 {
+	margin: 0;
+	font-size: 1.2rem;
+}
+
+.time, .temperature {
+	text-align: right;
+	padding-right: 20px;
+}
+
+.temperature {
+	grid-area: temp;
+	font-size: 4rem;
+}
